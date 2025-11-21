@@ -86,6 +86,3 @@ Want to collaborate or just say hi?
 -----
 
 *Feel free to explore, fork, or reach out. Thanks for stopping by\!*
-
-```
-```
