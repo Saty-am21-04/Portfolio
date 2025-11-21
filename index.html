@@ -1,112 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Satyam Mondal | Portfolio</title>
-        <link rel="stylesheet" href="style.css" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.15.1/devicon.min.css">
     </head>
 
-    <body>
-        <header>
-            <h1>Satyam Mondal</h1>
-            <p><em>Learning to build, one line of code at a time.</em></p>
+    <body class="bg-gray-100 text-gray-800">
+        <!-- Nav Bar -->
+        <nav class="sticky top-0 z-50 flex items-center justify-between p-6 bg-white/80 backdrop-blur-md shadow-md">
+            <div class="text-3xl font-bold text-cyan-500">
+                Satyam.Dev
+            </div>
 
-            <nav class="navbar">
-                <ul class="nav-items">
-                    <li><a href="#intro">Home</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+           <ul class="hidden md:flex space-x-8 text-lg font-medium text-gray-600">
+                <li><a href="#home" class="hover:text-cyan-600 transition">Home</a></li>
+                <li><a href="#about" class="hover:text-cyan-600 transition">About</a></li>
+                <li><a href="#projects" class="hover:text-cyan-600 transition">Projects</a></li>
+                <li><a href="#contact" class="hover:text-cyan-600 transition">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Intro -->
+        <header id="home" class=" py-20 px-4 text-center">
+            <h1 class="text-5xl font-bold mb-4">Hi, I'm <span class="text-blue-500">Satyam,<br> A</span>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-red-400" id="typeWriterText"></span>
+                <span class="border-r-4 border-blue-400 animate-pulse ml-1"></span>
 
+            </h1>
+            <p class="text-xl text-gray-600 mb-2">Computer Science Student & Java Developer</p>
+            <p class="italic text-lg text-cyan-500 mb-6">"Learning to build, one line of code at a time."</p>
+            <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                Download Resume
+            </button>
         </header>
-
-        <main>
-            <!-- Introduction -->
-            <section id="intro">
-                <h2>Hi, I'm <strong class="animated-name">Satyam Mondal</strong> 🖐️</h2>
-                <p>
-                    I'm a budding web developer exploring the world of HTML, CSS, and JavaScript.
-                    This portfolio is my personal playground where I document my learning journey,
-                    showcase projects, and grow as a developer. I love turning ideas into interactive
-                    and meaningful web experiences.
-                </p>
-                <a href="#projects" class="btn">Explore My Projects 🚀</a>
-            </section>
-
-            <section id="about">
-                <h2>About Me</h2>
-                <p>
-                    I'm passionate about technology and coding, and I've just started learning the
-                    basics of web development. My current focus is mastering HTML, CSS, and JavaScript
-                    to build interactive and responsive websites. I care deeply about user experience,
-                    emotional design, and making technology feel welcoming.
-                </p>
-                <img src="logo.jpg" alt="Satyam Mondal logo" />
-            </section>
-
-            <!-- Skills -->
-            <section id="skills">
-                <h2>My Skills</h2>
-                <ul>
-                    <li>💻 Semantic HTML5 & clean markup</li>
-                    <li>🎨 Responsive CSS3 layouts, gradients, and transitions</li>
-                    <li>🧠 UI/UX design with emotional resonance and accessibility</li>
-                    <li>🧩 Modular layout planning and wireframing</li>
-                    <li>🚀 GitHub deployment workflows</li>
-                    <li>🐍 Python for scripting and backend exploration</li>
-                    <li>☕ Java for GUI and object-oriented programming</li>
-                    <li>⚔️ Competitive programming & algorithmic problem solving</li>
-                </ul>
-
-            </section>
-
-            <!-- Projects -->
-            <section id="projects">
-                <h2>My Projects</h2>
-
-                <div class="project-card">
-                    <h3>Guess The Number 🎮</h3>
-                    <ul>
-                    <li><strong>Description:</strong> A fun interactive game built with Java Swing where the user selects a game mode and then tries to guess a number within a chosen range. It helped me strengthen my understanding of Java GUI development and event handling.</li>
-                    <li><strong>Link:</strong> 🔗 <a href="https://github.com/Saty-am21-04/GuessTheNumberGame">View on GitHub</a></li>
-                    </ul>
+        <!-- About Me -->
+        <section id="about" class="py-16 bg-white mb-10">
+            <div class="max-w-4xl mx-auto px-6 text-center md:text-left flex flex-col md:flex-row items-center gap-12">
+                
+                <div class="w-48 h-48 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-600 p-1 shrink-0">
+                    <div class="w-full h-full rounded-full bg-white flex items-center justify-center text-3xl text-gray-300 overflow-hidden">
+                        <img src="logo.jpg" alt="logo" />
+                    </div>
                 </div>
 
-                <div class="project-card">
-                    <h3>MindMosaic 🧠✨</h3>
-                    <ul>
-                    <li><strong>Description:</strong> An AI-powered mental wellness companion — currently a prototype with a main webpage and two connected pages. Even though it's still in progress, it reflects my interests in combining <strong>web development and AI for meaningful projects</strong>.</li>
-                    <li><strong>Link:</strong> 🔗 <a href="https://github.com/Saty-am21-04/MindMosaic">View on GitHub</a></li>
-                    </ul>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">About Me</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        Hello! I'm <span class="font-bold text-cyan-600">Satyam Mondal</span>, a Computer Science student with a passion for software development and cybersecurity. 
+                        <br><br>
+                        My journey began with <b>Java</b> & <b>C++</b>, building logic-heavy applications like flight booking systems. Recently, I've expanded into <b>Ethical Hacking</b> using <b>Kali Linux</b> and <b>Web Development</b> to build modern, responsive interfaces.
+                        <br><br>
+                        I love solving complex algorithmic problems (DSA) and am currently exploring how secure systems are architected.
+                    </p>
+                    
+                    <div class="flex justify-center md:justify-start gap-4">
+                        <a href="https://www.linkedin.com/in/satyammondal" class="px-6 py-2 border-2 border-cyan-600 text-cyan-600 font-bold rounded-full hover:bg-cyan-600 hover:text-white transition">
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/Saty-am21-04" class="px-6 py-2 border-2 border-gray-800 text-gray-800 font-bold rounded-full hover:bg-gray-800 hover:text-white transition">
+                            GitHub
+                        </a>
+                    </div>
                 </div>
 
-                <!-- <div class="project-card">
-                    <h3>DevJourney</h3>
-                    <ul>
-                    <li><strong>Description:</strong> A simple website built with HTML and CSS, documenting my step-by-step learning process.</li>
-                    <li><strong>Link:</strong> 🔗 <a href="#">View on GitHub</a></li>
-                    </ul>
-                </div> -->
-            </section>
+            </div>
+        </section>
 
-            <!-- Contact -->
-            <section id="contact">
-                <h2>Get in Touch</h2>
-                <ul>
-                    <li>📧 Email: <a href="mailto:s08047938@gmail.com">s08047938@gmail.com</a></li>
-                    <li>💻 GitHub: <a href="https://github.com/Saty-am21-04">Saty-am21-04</a></li>
-                    <li>🔗 LinkedIn: <a href="https://www.linkedin.com/in/satyammondal/">Satyam Mondal</a></li>
-                    <li>🐦 Twitter: <a href="https://x.com/Satyam210406">@Satyam210406</a></li>
-                </ul>
-            </section>
-        </main>
+        <!-- Skillset -->
+        <section class="py-12 bg-white border-y border-gray-200">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <h2 class="text-5xl font-bold mb-8 text-gray-800">My Tech Stack</h2>
+                
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="flex items-center space-x-2 px-6 py-3 bg-gray-50 rounded-full font-semibold text-gray-700 hover:bg-orange-200 hover:text-orange-500 border border-gray-200 transition transform hover:-translate-y-1 cursor-default shadow-sm">
+                        <i class="devicon-java-plain colored text-2xl"></i>
+                        <span class="font-bold text-lg">Java</span>
+                    </div>
+                    <div class="flex items-center space-x-2 px-6 py-3 bg-gray-50 rounded-full font-semibold text-gray-700 hover:bg-yellow-200 hover:text-yellow-500 border border-gray-200 transition transform hover:-translate-y-1 cursor-default shadow-sm">
+                        <i class="devicon-python-plain colored text-2xl"></i>
+                        <span class="font-bold text-lg">Python</span>
+                    </div>
+                    <div class="flex items-center space-x-2 px-6 py-3 bg-gray-50 rounded-full font-semibold text-gray-700 hover:bg-blue-200 hover:text-blue-500 border border-gray-200 transition transform hover:-translate-y-1 cursor-default shadow-sm">
+                        <i class="devicon-cplusplus-plain colored text-2xl"></i>
+                        <span class="font-bold text-lg">C++</span>
+                    </div>
+                    <div class="flex items-center space-x-2 px-6 py-3 bg-gray-50 rounded-full font-semibold text-gray-700 hover:bg-red-200 hover:text-red-500 border border-gray-200 transition transform hover:-translate-y-1 cursor-default shadow-sm">
+                        <i class="devicon-linux-plain text-2xl"></i>
+                        <span class="font-bold text-lg">Kali Linux</span>
+                    </div>
+                    <div class="flex items-center space-x-2 px-6 py-3 bg-gray-50 rounded-full font-semibold text-gray-700 hover:bg-purple-200 hover:text-purple-500 border border-gray-200 transition transform hover:-translate-y-1 cursor-default shadow-sm">
+                        <i class="devicon-html5-plain colored text-2xl"></i>
+                        <span class="font-bold text-lg">Web Dev</span>
+                    </div>
+                    <div class="flex items-center space-x-2 px-6 py-3 bg-gray-50 rounded-full font-semibold text-gray-700 hover:bg-cyan-200 hover:text-cyan-500 border border-gray-200 transition transform hover:-translate-y-1 cursor-default shadow-sm">
+                        <i class="devicon-javascript-plain colored text-2xl"></i>
+                        <span class="font-bold text-lg">JavaScript</span>
+                    </div>
+                    <div class="flex items-center space-x-2 px-6 py-3 bg-gray-50 rounded-full font-semibold text-gray-700 hover:bg-green-200 hover:text-green-500 border border-gray-200 transition transform hover:-translate-y-1 cursor-default shadow-sm">
+                        <i class="devicon-mysql-plain colored text-2xl"></i>
+                        <span class="font-bold text-lg">SQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects -->
+        <section id="projects" class="p-10 max-w-6xl mx-auto">
+            <h2 class="text-5xl font-bold mb-8 text-center">My Projects</h2>
 
-        <footer>
-            <p>© 2025 Satyam Mondal | Built with ❤️ as part of my DevJourney</p>
+            <div class="grid gap-8 grid-cols-1 md:grid-cols-3">
+                
+                <div class="relative bg-white p-6 rounded-lg shadow hover:shadow-xl transition duration-300 group">
+                    
+                    <div class="h-40 bg-blue-100 rounded mb-4 flex items-center justify-center text-6xl">🛫</div>
+                    <h3 class="text-xl font-bold mb-2">AirNexa</h3>
+                    <p class="text-gray-600 text-sm">A Java Swing flight booking system.</p>
+
+                    <button class="peer absolute top-4 right-4 w-8 h-8 bg-gray-200 rounded-full text-gray-600 font-bold hover:bg-blue-600 hover:text-white transition z-10">
+                        i
+                    </button>
+
+                    <div class="absolute inset-0 bg-white/95 p-6 rounded-lg opacity-0 peer-hover:opacity-100 transition duration-300 flex flex-col justify-center text-center shadow-inner border border-gray-100">
+                        <h4 class="font-bold text-blue-600 text-lg mb-2">Project Details</h4>
+                        <p class="text-gray-700 text-sm">Built using Java Swing and AWT. Features include Ticket Booking, Flight Search, and Admin Panel. Uses MySQL database for storing passenger records.</p>
+                    </div>
+                </div>
+
+                <div class="relative bg-white p-6 rounded-lg shadow hover:shadow-xl transition duration-300 group">
+                    
+                    <div class="h-40 bg-green-100 rounded mb-4 flex items-center justify-center text-6xl">🔒</div>
+                    <h3 class="text-xl font-bold mb-2">Cyber Tools</h3>
+                    <p class="text-gray-600 text-sm">CTF toolkit using Python.</p>
+
+                    <button class="peer absolute top-4 right-4 w-8 h-8 bg-gray-200 rounded-full text-gray-600 font-bold hover:bg-green-600 hover:text-white transition z-10">
+                        i
+                    </button>
+
+                    <div class="absolute inset-0 bg-white/95 p-6 rounded-lg opacity-0 peer-hover:opacity-100 transition duration-300 flex flex-col justify-center text-center shadow-inner border border-gray-100">
+                        <h4 class="font-bold text-green-600 text-lg mb-2">Toolkit Features</h4>
+                        <p class="text-gray-700 text-sm">A collection of Python scripts for Steganography, Caeser Cipher encryption, and Network scanning. Tested on Kali Linux environment.</p>
+                    </div>
+                </div>
+
+                <div class="relative bg-white p-6 rounded-lg shadow hover:shadow-xl transition duration-300 group">
+                    
+                    <div class="h-40 bg-purple-100 rounded mb-4 flex items-center justify-center text-6xl">🎨</div>
+                    <h3 class="text-xl font-bold mb-2">Portfolio</h3>
+                    <p class="text-gray-600 text-sm">Responsive site with Tailwind.</p>
+
+                    <button class="peer absolute top-4 right-4 w-8 h-8 bg-gray-200 rounded-full text-gray-600 font-bold hover:bg-purple-600 hover:text-white transition z-10">
+                        i
+                    </button>
+
+                    <div class="absolute inset-0 bg-white/95 p-6 rounded-lg opacity-0 peer-hover:opacity-100 transition duration-300 flex flex-col justify-center text-center shadow-inner border border-gray-100">
+                        <h4 class="font-bold text-purple-600 text-lg mb-2">Web Technologies</h4>
+                        <p class="text-gray-700 text-sm">Developed using HTML5, pure JavaScript, and Tailwind CSS. Features responsive grid layouts, glassmorphism, and flexbox interactions.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>        
+        <!-- Social Links -->
+        <footer id="contact" class="bg-gray-900 text-white py-8 mt-20">
+            <div class="mx-auto px-10 flex flex-col md:flex-row justify-between items-center">
+                
+                <div class="mb-4 md:mb-0">
+                    <span class="font-bold text-xl">Satyam.Dev</span>
+                    <p class="text-gray-400 text-sm mt-1">© 2025 Satyam Mondal. All rights reserved.</p>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="https://github.com/Saty-am21-04" class="text-gray-400 hover:text-white transition transform hover:scale-110">
+                        <i class="devicon-github-original text-2xl"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/satyammondal" class="text-gray-400 hover:text-white transition transform hover:scale-110">
+                        <i class="devicon-linkedin-plain text-2xl"></i>
+                    </a>
+                </div>
+
+            </div>
         </footer>
-    </body>
+
+        <script>
+            const words = ["Learner", "Creator", "Developer", "Photographer"];
+
+            let i = 0;
+            let timer;
+
+            function typingEffect(){
+                let word = words[i].split("");
+                var loopTyping = function() {
+                    if(word.length > 0) {
+                        document.getElementById('typeWriterText').innerHTML += word.shift();
+                    } else {
+                        setTimeout(deleteEffect, 2000);
+                        return false;
+                    }
+
+                    timer = setTimeout(loopTyping, 150);
+                };
+                loopTyping();
+            }
+
+            function deleteEffect(){
+                let word = document.getElementById("typeWriterText").innerHTML;
+                let wordArr = word.split("");
+                var loopDeleting = function(){
+                    if(wordArr.length > 0){
+                        wordArr.pop();
+                        document.getElementById('typeWriterText').innerHTML = wordArr.join("");                        
+                    } else {
+                        if(words.length > (i + 1)) {
+                            i++;                            
+                        } else {
+                            i = 0;
+                        }
+                        typingEffect();
+                        return false;
+                    }
+
+                    timer = setTimeout(loopDeleting, 100);
+                };
+                loopDeleting();
+            }
+
+            typingEffect();
+        </script>
+
+    </body> 
 </html>
